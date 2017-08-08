@@ -1,20 +1,26 @@
 package com.test;
 
+import java.io.StreamCorruptedException;
+import java.util.Arrays;
+
 public class ShapeTest {
 
 	public static void main(String[] args) {
 
+		// 打印方法
 		// 实例化一个对象
 		Shape shape = new Shape();
-		Circle circle = new Circle();
-		Rectangle rectangle = new Rectangle();
-		// 打印方法
 		shape.girth();
 		shape.area();
-		circle.girth();
-		circle.area();
-		rectangle.girth();
-		rectangle.area();
+
+		shape = new Circle();
+		shape.girth();
+		shape.area();
+
+		shape = new Rectangle();
+		shape.girth();
+		shape.area();
+
 	}
 
 }
