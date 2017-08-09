@@ -7,9 +7,9 @@ public class Player {
 	public static Scanner scanner = new Scanner(System.in);
 
 	// 定义玩家的属性
-	int s1 = 0;
+//	int s1 = 0;
 	private String name;
-	private int Score = s1;
+	private int Score =0;
 
 	public String getName() {
 		return name;

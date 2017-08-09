@@ -21,23 +21,23 @@ public class Game {
 		} else {
 			roleothervalue = "地狱使者";
 		}
-		
-//		int roleother = scanner.nextInt();
-//		String roleothervalue = null;
-//		switch (roleother) {
-//		case 1:
-//			roleothervalue = "Sunny";
-//			break;
-//		case 2:
-//			roleothervalue = "鬼怪";
-//			break;
-//		case 3:
-//			roleothervalue = "地狱使者";
-//			break;
-//		default:
-//			roleothervalue = "Sunny";
-//
-//		}
+
+		// int roleother = scanner.nextInt();
+		// String roleothervalue = null;
+		// switch (roleother) {
+		// case 1:
+		// roleothervalue = "Sunny";
+		// break;
+		// case 2:
+		// roleothervalue = "鬼怪";
+		// break;
+		// case 3:
+		// roleothervalue = "地狱使者";
+		// break;
+		// default:
+		// roleothervalue = "Sunny";
+		//
+		// }
 		// 初始化自己角色
 		System.out.println("请输入你的名字：");
 		String roleme = scanner.next();
@@ -51,8 +51,7 @@ public class Game {
 		// 进行游戏比较
 		String a = player.gameone();
 		String b = computer.gametwo();
-		if (("剪刀".equals(a) && "剪刀".equals(b)) || ("石头".equals(a) && "石头".equals(b))
-				|| ("布".equals(a) && "布".equals(b))) {
+		if ((a.equals(b)) || ("布".equals(a) && "布".equals(b))) {
 			System.out.println("结果：平局，继续努力\n");
 		} else if (("剪刀".equals(a) && "布".equals(b)) || ("石头".equals(a) && "剪刀".equals(b))
 				|| ("布".equals(a) && "石头".equals(b))) {
@@ -67,10 +66,18 @@ public class Game {
 	}
 
 	public void conclusion() {
+		Main main = new Main();
 		// 玩家不玩之后总结分数
+		System.out.println("----------------------------------------");
+		System.out.println(player.getName() + " VS " + computer.getName());
+
+		// 计算对战次数,虽然调用main函数的值很奇怪。。。。。。
+		System.out.println("对战次数：" + main.getN() + "\n");
 		System.out.println("姓名\t得分\t");
 		System.out.println(player.getName() + "\t" + player.getScore() + "\t");
 		System.out.println(computer.getName() + "\t" + computer.getScore() + "\t\n");
+
+		// 判断对战结果
 		if (player.getScore() > computer.getScore()) {
 			System.out.println("结果：恭喜恭喜！");
 			System.out.println("----------------------------------------\n");
