@@ -58,7 +58,7 @@
     }
 
     function exit() {
-        document.location = "login.jsp";
+        document.location = "LogoutServlet"";
     }
 
     function query() {
